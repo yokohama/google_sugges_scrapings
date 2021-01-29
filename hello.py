@@ -14,7 +14,8 @@ GOOGLE_API_JSON = settings.GOOGLE_API_JSON
 SPREAD_SHEET_KEY = settings.SPREAD_SHEET_KEY
 
 LOGGER = open('log.txt', 'a')
-LOGGER.write('Start\n')
+#LOGGER.write('Start\n')
+print('Start\n')
 
 
 def scraping(keyword):
@@ -37,8 +38,10 @@ def scraping(keyword):
     for item in items:
         results.append(item.text)
     
-    LOGGER.writelines(results)
-    LOGGER.write('\n')
+    #LOGGER.writelines(results)
+    #LOGGER.write('\n')
+    print(results)
+    print('\n')
     
     #driver.save_screenshot('search_results.png')
     driver.quit()
@@ -71,5 +74,6 @@ for index, keyword in enumerate(master.col_values(1)):
 for scraping_result in scraping_results:
     result.append_row([scraping_keyword, scraping_result])
 
-LOGGER.write('Finish\n')
+#LOGGER.write('Finish\n')
+print('Finish\n')
 LOGGER.close()

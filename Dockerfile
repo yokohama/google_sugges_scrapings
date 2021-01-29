@@ -28,4 +28,5 @@ RUN cd /opt/chrome/ && \
  
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/chrome
 
-#CMD ["python", "/root/hello.py"]
+#CMD ["python", "apple.py"]
+CMD ["python", "hello.py"]
