@@ -1,0 +1,9 @@
+docker build -t python-selenium-chrome .
+
+
+docker tag python-selenium-chrome 770425840624.dkr.ecr.ap-northeast-1.amazonaws.com/suggest-app
+
+#dockerログイン
+aws ecr get-login-password | docker login --username AWS --password-stdin 770425840624.dkr.ecr.ap-northeast-1.amazonaws.com
+
+docker push 770425840624.dkr.ecr.ap-northeast-1.amazonaws.com/suggest-app
